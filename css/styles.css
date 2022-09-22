@@ -11,7 +11,7 @@ body {
 h1,
 h2 {
   text-align: center;
-  border: 1px solid black;
+  border: 1px inset black;
   box-shadow: 2px 2px 2px black;
 }
 .about {
@@ -23,6 +23,71 @@ h2 {
   padding: 20px;
 }
 nav {
-  text-align: end;
-  border: 10px 10px 1opx;
+  text-align: center;
+  border-bottom: 5px solid black;
+
+  padding-bottom: 15px;
+}
+
+.button {
+  display: inline-block;
+  border-radius: 4px;
+  background-color: grey;
+  border: none;
+  color: #ffffff;
+  text-align: center;
+  font-size: 15px;
+  padding: 20px;
+  width: 200px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: "\00bb";
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 25px;
+  color: black;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+.phone {
+  list-style-type: "📲 ";
+}
+.mail {
+  list-style-type: " 📨 ";
+}
+.java {
+  list-style: url(/img/js.svg);
+  padding: 10px;
+  margin-left: 90px;
+}
+.html {
+  list-style: url(/img/html.svg);
+  padding: 10px;
+  margin-left: 50px;
+}
+.css {
+  list-style: url(/img/css.svg);
+  padding: 10px;
+  margin-left: 40px;
 }
